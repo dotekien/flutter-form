@@ -4,5 +4,5 @@ publish:
 	git checkout gh-pages
 	git add .
 	git commit -m "updated"
-	git push
+	git push origin gh-pages
 	git checkout master
