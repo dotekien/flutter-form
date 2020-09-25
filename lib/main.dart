@@ -29,6 +29,19 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   final _formKey = GlobalKey<FormState>();
+  FocusNode inputTextFocusNode;
+  @override
+  void initState() {
+    super.initState();
+    inputTextFocusNode = FocusNode();
+  }
+
+  @override
+  void dispose() {
+    // Clean up the focus node when the Form is disposed.
+    inputTextFocusNode.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -46,6 +59,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   TextFormField(
+                    autofocus: true,
+                    focusNode: inputTextFocusNode,
+                    onTap: () {
+                      inputTextFocusNode.unfocus();
+                      FocusScope.of(context).requestFocus(inputTextFocusNode);
+                    },
                     decoration: InputDecoration(
                         labelText: 'Enter your username'
                     ),
