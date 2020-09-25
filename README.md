@@ -17,3 +17,5 @@ samples, guidance on mobile development, and a full API reference.
 
 For publishing flutter app to github:
 https://www.solutelabs.com/blog/flutter-for-web-how-to-deploy-a-flutter-web-app
+
+Cookbook: https://flutter.dev/docs/cookbook
