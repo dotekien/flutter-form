@@ -1,6 +1,6 @@
 compile:
-	flutter pub get
 	flutter pub global run peanut
+	flutter pub get
 publish:
 	git checkout gh-pages
 	git add .
