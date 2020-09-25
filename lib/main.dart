@@ -46,9 +46,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   TextFormField(
+                    decoration: InputDecoration(
+                        labelText: 'Enter your username'
+                    ),
                     validator: (value) {
                       if (value.isEmpty) {
-                        return 'Please enter some text. Cannot be empty';
+                        return 'Please enter some text';
                       }
                       return null;
                     },
