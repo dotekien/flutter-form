@@ -1,6 +1,6 @@
 compile:
 	flutter pub global run peanut
-publish:
+publish: compile
 	git checkout gh-pages
 	git add .
 	git commit -m "updated"
