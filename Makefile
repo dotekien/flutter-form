@@ -1,5 +1,5 @@
 compile:
-	fluter pub get
+	flutter pub get
 	flutter pub global run peanut
 publish:
 	git checkout gh-pages
